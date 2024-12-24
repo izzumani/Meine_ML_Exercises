@@ -1,0 +1,15 @@
+$ mkdir neo4j_tutorial; cd neo4j_tutorial
+$ touch .env
+
+NEO4J_USERNAME="YOUR-NEO4J-USERNAME"
+NEO4J_PASSWORD="YOUR-COPIED-NEO4J-PASSWORD"
+NEO4J_CONNECTION_URI="YOUR-COPIED-NEO4J-URI"
+
+$ conda create -n neo4j_tutorial python=3.9 -y
+$ conda activate neo4j_tutorial
+$ pip install ipykernel  # To add the environment to Jupyter
+$ ipython kernel install --user --name=neo4j_tutorial
+$ pip install neo4j python-dotenv tqdm pandas
+
+$ wget https://raw.githubusercontent.com/BexTuychiev/medium_stories/refs/heads/master/2024/9_september/3_neo4j_python/ingest_football_data.py
+$ python ingest_football_data.py
